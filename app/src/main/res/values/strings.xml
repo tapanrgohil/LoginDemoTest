@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LoginDemoTest</string>
+    <string name="hint_userid">UserId</string>
+    <string name="hint_password">password</string>
+    <string name="login">login</string>
+    <string name="hello">Hello %1s </string>
+</resources>
