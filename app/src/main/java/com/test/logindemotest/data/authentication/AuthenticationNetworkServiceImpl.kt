@@ -10,12 +10,14 @@ class AuthenticationNetworkServiceImpl : AuthenticationNetworkService {
         delay(2000) //simulates network latency
         return checkValidCredential(userId, password)
     }
-
+        //Generally this executes on server side not on front end
     private fun checkValidCredential(userId: String, password: String): LoginResponse {
         if (userId == "123456" && password == "password") {
             return LoginResponse("Success", "123456")
+        } else if (userId != "123456") {
+            throw RuntimeException("UserId does not found in record")
         } else {
-            throw RuntimeException("Invalid Credentials")
+            throw RuntimeException("UserId and password does not match (Check password and try again)")
         }
     }
 }
